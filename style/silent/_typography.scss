@@ -1,0 +1,129 @@
+$thin:    100;
+$light:   300;
+$regular: 400;
+$medium:  500;
+$bold:    700;
+$black:   900;
+
+@mixin type-scaling($letter-spacing, $size, $line-height: $size)  {
+  letter-spacing: $letter-spacing / $size * 1em;
+
+  font-size:      $size * 0.0625rem;
+  line-height:    $line-height / $size;
+}
+
+@mixin h1 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $light;
+ 
+  @include type-scaling(-1.5, 96);
+}
+
+@mixin h2 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $light;
+ 
+  @include type-scaling(-0.5, 60);
+}
+
+@mixin h3 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0, 48, 50);
+}
+
+@mixin h4 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0.25, 34, 40);
+}
+
+@mixin h5 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0, 24, 32);
+}
+
+@mixin h6 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $medium;
+ 
+  @include type-scaling(0.15, 20, 32);
+}
+
+@mixin subtitle1 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0.15, 16, 28);
+}
+
+@mixin subtitle2 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $medium;
+ 
+  @include type-scaling(0.1, 14, 22);
+}
+
+@mixin body1 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0.5, 16, 24);
+}
+
+@mixin body2 {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0.25, 14, 20);
+}
+
+@mixin button {
+  text-decoration:  none;
+  text-transform:   uppercase;
+  font-weight:      $medium;
+ 
+  @include type-scaling(1.25, 14, 36); 
+  }
+
+@mixin caption {
+  text-decoration:  inherit;
+  text-transform:   inherit;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(0.4, 12, 20);
+}
+
+@mixin overline {
+  text-decoration:  none;
+  text-transform:   uppercase;
+
+  font-weight:      $regular;
+ 
+  @include type-scaling(1.5, 10, 32);
+}

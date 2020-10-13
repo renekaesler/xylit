@@ -1,0 +1,25 @@
+{
+  "name": "xylit",
+  "version": "0.0.1",
+  "description": "taking web components to the next level",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renekaesler/xylit.git"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "user interface",
+    "user experience",
+    "web components",
+    "library"
+  ],
+  "author": "René Kaesler",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/renekaesler/xylit/issues"
+  },
+  "homepage": "https://github.com/renekaesler/xylit#readme"
+}
