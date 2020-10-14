@@ -1,0 +1,6 @@
+@for $i from 1 through 12 {
+  $size: 100% * ($i/12);
+
+  .x-#{$i} { width: $size; }
+  .y-#{$i} { height: $size; }
+}
