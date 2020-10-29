@@ -23,13 +23,13 @@ const config = {
   }),
   development: () => ({
     mode:     'development',
-    entry:    './doc/index.js',
+    entry:    './docs/index.js',
     devtool:  'inline-source-map',
     devServer: {
-      contentBase:'./doc/public',
+      contentBase:'./docs/public',
     },
     plugins: [
-      new HtmlWebpackPlugin({ template: 'doc/index.html' }),
+      new HtmlWebpackPlugin({ template: 'docs/index.html' }),
     ]
   }),
   production: env => ({

@@ -1,0 +1,17 @@
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  @extend %flex;
+}
+
+.col {
+  @extend %flex;
+  flex-direction: column;
+}
+
+.cell {
+  flex: 0;
+}

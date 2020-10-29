@@ -1,0 +1,31 @@
+@each $attr in (margin, padding) {
+  $abbr: str-slice($attr, 1, 1);
+
+  @each $size, $space in $spaces {
+    .gutter-#{$abbr}-#{$size} {
+      margin-top: -1 * $space;
+      margin-left: -1 * $space;
+
+      > * {
+        #{$attr}-top: #{$space};
+        #{$attr}-left: #{$space};
+      }
+    }
+
+    .gutter-#{$abbr}x-#{$size} {
+      margin-left: -1 * $space;
+
+      > * { #{$attr}-left: #{$space}; }
+    }
+
+    .gutter-#{$abbr}y-#{$size} {
+      margin-top: -1 * $space;
+
+      > * { #{$attr}-top: #{$space}; }
+    }
+
+    .gap-#{$size} {
+      gap: $space;
+    }
+  }
+}

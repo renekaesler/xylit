@@ -1,0 +1,30 @@
+$space: 16px;
+$spaces: (
+  0: 0,
+  1: 0.25 * $space,
+  2: 0.5  * $space,
+  3: $space,
+  4: 1.5  * $space,
+  5: 3.0  * $space
+);
+
+@mixin generate-spacing($attr, $size, $space) {
+  $abbr: str-slice($attr, 1, 1);
+
+  .x-#{$abbr}#{$size} { #{$attr}: $space !important; }
+
+  .x-#{$abbr}x-#{$size} {
+    #{$attr}-left:  $space !important;
+    #{$attr}-right: $space !important;
+  }
+
+  .x-#{$abbr}y-#{$size} {
+    #{$attr}-top:     $space !important;
+    #{$attr}-bottom:  $space !important;
+  }
+
+  .x-#{$abbr}t-#{$size} { #{$attr}-top:     $space !important; }
+  .x-#{$abbr}r-#{$size} { #{$attr}-right:   $space !important; }
+  .x-#{$abbr}b-#{$size} { #{$attr}-bottom:  $space !important; }
+  .x-#{$abbr}l-#{$size} { #{$attr}-left:    $space !important; }
+}

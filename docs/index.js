@@ -1,0 +1,1 @@
+import '@/style/xylit.scss';

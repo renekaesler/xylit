@@ -1,0 +1,40 @@
+x-grid {
+  --grid-tc: repeat(4, 1fr);
+  --grid-cs: 1; /* column start */
+  --grid-ce: -1; /* column end */
+
+  display: grid;
+  gap: 16px 32px;
+  grid-template-columns: var(--grid-tc);
+
+  @for $i from 1 through 8 {
+    &[columns="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
+  }
+
+  > x-cell {
+    display: block;
+    appearance: none;
+
+    /* connect vars */
+    &[span]                                   { grid-column-end: span var(--grid-ce); }
+    &[span*="+"], &[span*="-"], &[span*=".."] { grid-column-start: var(--grid-cs); }
+    &[span*="-"], &[span*=".."]               { grid-column-end: var(--grid-ce); }
+    &[span="row"]                             { grid-column: 1 / -1 }
+
+
+    @for $i from 1 through 8 {
+      &[columns="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
+
+      /* span=start... */
+      &[span^="#{$i}"] { --grid-cs: #{$i}; }
+    }
+
+    /* span=...+width, span=...-end */
+    &[span$="+1"], &[span="1"]  { --grid-ce: 1; }
+    &[span$="-8"]               { --grid-ce: 9; }
+
+    @for $i from 1 through 7 {
+      &[span$="+#{$i + 1}"], &[span$="-#{$i}"], &[span="#{$i + 1}"] { --grid-ce: 2; }
+    }
+  }
+}

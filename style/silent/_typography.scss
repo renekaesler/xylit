@@ -13,117 +13,131 @@ $black:   900;
 }
 
 @mixin h1 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $light;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $light;
- 
   @include type-scaling(-1.5, 96);
 }
 
 @mixin h2 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $light;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $light;
- 
   @include type-scaling(-0.5, 60);
 }
 
 @mixin h3 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0, 48, 50);
 }
 
 @mixin h4 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0.25, 34, 40);
 }
 
 @mixin h5 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0, 24, 32);
 }
 
 @mixin h6 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $medium;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $medium;
- 
   @include type-scaling(0.15, 20, 32);
 }
 
 @mixin subtitle1 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0.15, 16, 28);
 }
 
 @mixin subtitle2 {
+  font-family:      'Roboto Mono', monospace;
+  font-weight:      $medium;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $medium;
- 
   @include type-scaling(0.1, 14, 22);
 }
 
 @mixin body1 {
+  font-family:      'Roboto', sans-serif;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0.5, 16, 24);
 }
 
 @mixin body2 {
+  font-family:      'Roboto', sans-serif;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0.25, 14, 20);
 }
 
 @mixin button {
+  font-family:      'Roboto', sans-serif;
+  font-weight:      $medium;
+
   text-decoration:  none;
   text-transform:   uppercase;
-  font-weight:      $medium;
- 
-  @include type-scaling(1.25, 14, 36); 
+
+  @include type-scaling(1.25, 14, 36);
   }
 
 @mixin caption {
+  font-family:      'Roboto', sans-serif;
+  font-weight:      $regular;
+
   text-decoration:  inherit;
   text-transform:   inherit;
 
-  font-weight:      $regular;
- 
   @include type-scaling(0.4, 12, 20);
 }
 
 @mixin overline {
+  font-family:      'Roboto', sans-serif;
+  font-weight:      $regular;
+
   text-decoration:  none;
   text-transform:   uppercase;
 
-  font-weight:      $regular;
- 
   @include type-scaling(1.5, 10, 32);
 }

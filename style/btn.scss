@@ -1,0 +1,29 @@
+.x-btn {
+  display: inline-flex;
+  height: 36px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+
+  @include button;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &--filled {
+    background: black;
+    color: white;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  &--outlined {
+    border: 1px solid;
+  }
+}

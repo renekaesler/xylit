@@ -1,0 +1,5 @@
+@each $attr in (margin, padding) {
+  @each $size, $space in $spaces {
+    @include generate-spacing($attr, $size, $space);
+  }
+}

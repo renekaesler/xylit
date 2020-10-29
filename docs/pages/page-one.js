@@ -1,0 +1,1 @@
+export default () => `<h1>This is page one</h1>`
