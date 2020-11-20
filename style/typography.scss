@@ -11,3 +11,10 @@
 .x-button     { @include button; }
 .x-caption    { @include caption; }
 .x-overline   { @include overline; }
+
+
+// utils
+
+.x-txt-center {
+  text-align: center;
+}

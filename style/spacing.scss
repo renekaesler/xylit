@@ -1,5 +1,10 @@
-@each $attr in (margin, padding) {
-  @each $size, $space in $spaces {
+
+@each $size, $space in $spaces {
+  @each $attr in (margin, padding) {
     @include generate-spacing($attr, $size, $space);
   }
+
+  .gap-#{$size}   { gap: $space; }
+  .gap-x-#{$size} { column-gap: $space; }
+  .gap-y-#{$size} { row-gap: $space; }
 }

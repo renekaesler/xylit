@@ -11,7 +11,7 @@ $spaces: (
 @mixin generate-spacing($attr, $size, $space) {
   $abbr: str-slice($attr, 1, 1);
 
-  .x-#{$abbr}#{$size} { #{$attr}: $space !important; }
+  .x-#{$abbr}-#{$size} { #{$attr}: $space !important; }
 
   .x-#{$abbr}x-#{$size} {
     #{$attr}-left:  $space !important;
