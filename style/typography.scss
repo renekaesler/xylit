@@ -1,20 +1,13 @@
-.x-h1         { @include h1; }
-.x-h2         { @include h2; }
-.x-h3         { @include h3; }
-.x-h4         { @include h4; }
-.x-h5         { @include h5; }
-.x-h6         { @include h6; }
-.x-subtitle1  { @include subtitle1; }
-.x-subtitle2  { @include subtitle2; }
-.x-body1      { @include body1; }
-.x-body2      { @include body2; }
-.x-button     { @include button; }
-.x-caption    { @include caption; }
-.x-overline   { @include overline; }
-
-
-// utils
-
-.x-txt-center {
-  text-align: center;
-}
+.h1         { @include h1; }
+.h2         { @include h2; }
+.h3         { @include h3; }
+.h4         { @include h4; }
+.h5         { @include h5; }
+.h6         { @include h6; }
+.subtitle1  { @include subtitle1; }
+.subtitle2  { @include subtitle2; }
+.body1      { @include body1; }
+.body2      { @include body2; }
+.button     { @include button; }
+.caption    { @include caption; }
+.overline   { @include overline; }

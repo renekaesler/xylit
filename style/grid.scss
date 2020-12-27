@@ -1,40 +1,102 @@
-x-grid {
-  --grid-tc: repeat(4, 1fr);
-  --grid-cs: 1; /* column start */
-  --grid-ce: -1; /* column end */
+%grid {
+  grid-template-columns: repeat(12, 1fr);
+}
 
+.igrid {
+  @extend %grid;
+  display: inline-grid;
+}
+
+.grid {
+  @extend %grid;
   display: grid;
-  gap: 16px 32px;
-  grid-template-columns: var(--grid-tc);
+}
 
-  @for $i from 1 through 8 {
-    &[columns="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
+// grid alignment
+// ==============
+
+$-grid-alignments: (
+  around:   space-around,
+  between:  space-between,
+  center:   center,
+  end:      end,
+  evenly:   space-evenly,
+  start:    start,
+  stretch:  stretch,
+);
+
+@each $name, $alignment in $-grid-alignments {
+  .grid-#{$name} {
+    align-content: $alignment;
+    justify-content: $alignment;
   }
+}
 
-  > x-cell {
-    display: block;
-    appearance: none;
+@each $name, $alignment in $-grid-alignments {
+  .grid-h#{$name} { justify-content: $alignment; }
+  .grid-v#{$name} { align-content: $alignment; }
+}
 
-    /* connect vars */
-    &[span]                                   { grid-column-end: span var(--grid-ce); }
-    &[span*="+"], &[span*="-"], &[span*=".."] { grid-column-start: var(--grid-cs); }
-    &[span*="-"], &[span*=".."]               { grid-column-end: var(--grid-ce); }
-    &[span="row"]                             { grid-column: 1 / -1 }
+// cell alignment
+// ==============
 
+$-cell-alignments: (
+  center:   center,
+  end:      end,
+  start:    start,
+  stretch:  stretch,
+);
 
-    @for $i from 1 through 8 {
-      &[columns="#{$i}"] { --grid-tc: repeat(#{$i}, 1fr); }
-
-      /* span=start... */
-      &[span^="#{$i}"] { --grid-cs: #{$i}; }
-    }
-
-    /* span=...+width, span=...-end */
-    &[span$="+1"], &[span="1"]  { --grid-ce: 1; }
-    &[span$="-8"]               { --grid-ce: 9; }
-
-    @for $i from 1 through 7 {
-      &[span$="+#{$i + 1}"], &[span$="-#{$i}"], &[span="#{$i + 1}"] { --grid-ce: 2; }
-    }
+@each $name, $alignment in $-cell-alignments {
+  .cells-#{$name} {
+    align-items: $alignment;
+    justify-items: $alignment;
   }
+}
+
+@each $name, $alignment in $-cell-alignments {
+  .cell-#{$name} {
+    align-self: $alignment;
+    justify-self: $alignment;
+  }
+}
+
+@each $name, $alignment in $-cell-alignments {
+  .cols-#{$name} { justify-items: $alignment; }
+  .rows-#{$name} { align-items: $alignment; }
+}
+
+@each $name, $alignment in $-cell-alignments {
+  .col-#{$name} { justify-self: $alignment; }
+  .row-#{$name} { align-self: $alignment; }
+}
+
+// cell placing
+// ============
+
+@for $i from 1 through 12 {
+  .cols-#{$i} { grid-template-columns: repeat(8, 1fr); }
+  .rows-#{$i} { grid-template-columns: repeat(12, 1fr); }
+
+  .cell-#{$i} {
+    grid-column: span $i / span $i;
+    grid-row: span $i / span $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i}  { grid-column: span $i / span $i; }
+  .row-#{$i}  { grid-row: span $i / span $i; }
+}
+
+@for $i from 1 through 12 {
+  .col-s#{$i}   { grid-column-start: $i; }
+  .col-sn#{$i}  { grid-column-start: -$i; }
+  .row-s#{$i}   { grid-row-start: $i; }
+  .row-sn#{$i}  { grid-row-start: -$i; }
+
+  .col-e#{$i}   { grid-column-end: $i + 1; }
+  .col-en#{$i}  { grid-column-end: -$i; }
+  .row-e#{$i}   { grid-row-end: $i + 1; }
+  .row-en#{$i}  { grid-row-end: -$i; }
 }

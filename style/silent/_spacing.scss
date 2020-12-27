@@ -11,20 +11,20 @@ $spaces: (
 @mixin generate-spacing($attr, $size, $space) {
   $abbr: str-slice($attr, 1, 1);
 
-  .x-#{$abbr}-#{$size} { #{$attr}: $space !important; }
+  .#{$abbr}-#{$size} { #{$attr}: $space !important; }
 
-  .x-#{$abbr}x-#{$size} {
+  .#{$abbr}x-#{$size} {
     #{$attr}-left:  $space !important;
     #{$attr}-right: $space !important;
   }
 
-  .x-#{$abbr}y-#{$size} {
+  .#{$abbr}y-#{$size} {
     #{$attr}-top:     $space !important;
     #{$attr}-bottom:  $space !important;
   }
 
-  .x-#{$abbr}t-#{$size} { #{$attr}-top:     $space !important; }
-  .x-#{$abbr}r-#{$size} { #{$attr}-right:   $space !important; }
-  .x-#{$abbr}b-#{$size} { #{$attr}-bottom:  $space !important; }
-  .x-#{$abbr}l-#{$size} { #{$attr}-left:    $space !important; }
+  .#{$abbr}t-#{$size} { #{$attr}-top:     $space !important; }
+  .#{$abbr}r-#{$size} { #{$attr}-right:   $space !important; }
+  .#{$abbr}b-#{$size} { #{$attr}-bottom:  $space !important; }
+  .#{$abbr}l-#{$size} { #{$attr}-left:    $space !important; }
 }
