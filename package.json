@@ -1,6 +1,6 @@
 {
   "name": "xylit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "taking web components to the next level",
   "scripts": {
     "serve": "webpack serve --env development --host 0.0.0.0"
