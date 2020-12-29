@@ -1,3 +1,10 @@
-.block  { display: block !important; }
-.iblock { display: inline-block !important; }
-.inline { display: inline !important; }
+.block    { display: block !important; }
+.contents { display: contents !important; }
+.flex     { display: flex !important; }
+.froot    { display: flow-root !important; }
+.grid     { display: grid !important; }
+.iblock   { display: inline-block !important; }
+.iflex    { display: inline-flex !important; }
+.igrid    { display: inline-grid !important; }
+.inline   { display: inline !important; }
+.none     { display: none !important; }

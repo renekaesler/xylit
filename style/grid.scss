@@ -1,17 +1,3 @@
-%grid {
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.igrid {
-  @extend %grid;
-  display: inline-grid;
-}
-
-.grid {
-  @extend %grid;
-  display: grid;
-}
-
 // grid alignment
 // ==============
 

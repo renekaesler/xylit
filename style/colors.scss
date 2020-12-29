@@ -1,0 +1,6 @@
+@import './colors.silent';
+
+@each $name, $color in $colors {
+  .#{$name} { color: $color !important; }
+  .bg-#{$name} { background-color: $color !important; }
+}

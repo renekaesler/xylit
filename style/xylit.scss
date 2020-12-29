@@ -1,9 +1,9 @@
-@import './silent.scss';
-
-@import './spacing.scss';
-@import './sizing.scss';
-@import './box.scss';
-@import './gutters.scss';
+@import './box';
+@import './colors';
+@import './display';
+@import './dock';
 @import './grid';
+@import './shadow';
+@import './sizing';
+@import './spacing';
 @import './typography';
-@import './btn';

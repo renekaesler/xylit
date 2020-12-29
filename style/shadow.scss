@@ -1,0 +1,10 @@
+@import './shadow.silent';
+
+@for $i from 1 through length($shadows) {
+  $shadow: nth($shadows, $i);
+  $idx: $i - 1;
+
+  .shadow-#{$idx} {
+    box-shadow: generate-shadow($shadow);
+  }
+}

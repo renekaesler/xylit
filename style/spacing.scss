@@ -1,3 +1,4 @@
+@import './spacing.silent';
 
 @each $size, $space in $spaces {
   @each $attr in (margin, padding) {
