@@ -1,0 +1,13 @@
+.typescale > li {
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+  padding: 12px 16px 12px 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.typescale > li:hover {
+  background: #FAFAFA;
+  outline: 1px solid #EEEEEE;
+}
